@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">    
+    <mat-form-field appearance="outline" class="full-width" col-50>
+      <mat-label>Fruta escolhida:</mat-label>
+      <input matInput placeholder="Sabor do suco..." [(ngModel)]="model.sabor" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Água ou leite?</mat-label>
+        <input matInput placeholder="Qual o liquido escolhido..." [(ngModel)]="model.liquido" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Quantos copos?</mat-label>
+        <input matInput placeholder="Quantidade de copos..." [(ngModel)]="model.quantidade" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Qual tamanho escolhido?</mat-label>
+        <input matInput placeholder="Qual o tamanho do copo..." [(ngModel)]="model.tamanho" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Foi pedido gelo?</mat-label>
+        <input matInput placeholder="Vai gelo no suco?" [(ngModel)]="model.gelo" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Foi pedido adocicado?</mat-label>
+        <input matInput placeholder="É colocado açucar no copo?" [(ngModel)]="model.acucar" required>
+    </mat-form-field> 
+        <mat-form-field appearance="outline" class="full-width" col-50>
+            <mat-label>Com hortela?</mat-label>
+            <input matInput placeholder="Vai hortelã no suco?" [(ngModel)]="model.hortela" required>
+        </mat-form-field>   
+    <div class="toolbar___form">
+      <button mat-raised-button routerLink="/usuarios">Cancelar</button>
+      <button mat-raised-button color="primary" (click)="save()">Salvar</button>
+    </div>
+  </div>
+</body>
+</html>

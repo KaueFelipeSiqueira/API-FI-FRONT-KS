@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">    
+    <mat-form-field appearance="outline" class="full-width" col-50>
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="Nome do cliente..." [(ngModel)]="model.nome" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Pedido</mat-label>
+        <input matInput placeholder="Sabor do cuco..." [(ngModel)]="model.pedido" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Tamanho</mat-label>
+        <input matInput placeholder="Tamanho do copo..." [(ngModel)]="model.tamanho" required>
+      </mat-form-field>    
+    <div class="toolbar___form">
+      <button mat-raised-button routerLink="/usuarios">Cancelar</button>
+      <button mat-raised-button color="primary" (click)="save()">Salvar</button>
+    </div>
+  </div>
+</body>
+</html>
